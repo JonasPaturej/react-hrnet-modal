@@ -12,9 +12,10 @@ export default defineConfig({
       entry: resolve(__dirname, "src/index.js"),
       name: "ReactHrnetModal",
       fileName: "react-hrnet-modal",
+      formats: ["es"],
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
+      external: ["react", "react-dom", "react/jsx-runtime"],
     },
   },
 });

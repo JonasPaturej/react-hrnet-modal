@@ -2,12 +2,9 @@
   "name": "react-hrnet-modal",
   "version": "0.1.0",
   "type": "module",
-  "main": "./dist/react-hrnet-modal.umd.cjs",
   "module": "./dist/react-hrnet-modal.js",
   "style": "./dist/react-hrnet-modal.css",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
