@@ -1,16 +1,96 @@
-# React + Vite
+# React HRnet Modal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight and reusable React modal component created as part of the HRnet migration project.
 
-Currently, two official plugins are available:
+This library replaces the original jQuery modal plugin with a modern React component that is easy to integrate into any React application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Lightweight
+- Easy to use
+- Reusable
+- React-based
+- Custom content using children
+- Close button included
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Requirements
+
+- Node.js >= 18
+- React >= 19
+
+---
+
+## Installation
+
+```bash
+npm install react-hrnet-modal
+```
+
+---
+
+## Import
+
+```jsx
+import { Modal } from "react-hrnet-modal";
+import "react-hrnet-modal/dist/react-hrnet-modal.css";
+```
+
+---
+
+## Usage
+
+```jsx
+import { useState } from "react";
+import { Modal } from "react-hrnet-modal";
+import "react-hrnet-modal/dist/react-hrnet-modal.css";
+
+function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      <button onClick={() => setIsOpen(true)}>Open Modal</button>
+
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <p>Employee created!</p>
+      </Modal>
+    </>
+  );
+}
+```
+
+---
+
+# Props
+
+| Prop     | Type      | Required | Description                                            |
+| -------- | --------- | -------- | ------------------------------------------------------ |
+| isOpen   | boolean   | Yes      | Controls whether the modal is displayed.               |
+| onClose  | function  | Yes      | Function called when the user clicks the close button. |
+| children | ReactNode | Yes      | Content displayed inside the modal.                    |
+
+---
+
+## Example
+
+```jsx
+<Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+  <p>Employee created!</p>
+</Modal>
+```
+
+---
+
+## Author
+
+Jonas Paturej
+
+---
+
+## License
+
+MIT

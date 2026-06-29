@@ -8,6 +8,7 @@ const __dirname = fileURLToPath(new URL(".", import.meta.url));
 export default defineConfig({
   plugins: [react()],
   build: {
+    minify: "terser",
     lib: {
       entry: resolve(__dirname, "src/index.js"),
       name: "ReactHrnetModal",

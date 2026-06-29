@@ -1,10 +1,27 @@
 {
-  "name": "react-hrnet-modal",
-  "version": "0.1.0",
+  "name": "react-hrnet-modal-jp",
+  "version": "1.0.0",
+  "description": "A lightweight and reusable React modal component created for the HRnet migration project.",
+  "keywords": [
+    "react",
+    "modal",
+    "component",
+    "popup",
+    "dialog",
+    "hrnet"
+  ],
+  "author": "Jonas Paturej",
+  "license": "MIT",
   "type": "module",
+  "exports": {
+    ".": "./dist/react-hrnet-modal.js",
+    "./dist/react-hrnet-modal.css": "./dist/react-hrnet-modal.css"
+  },
   "module": "./dist/react-hrnet-modal.js",
   "style": "./dist/react-hrnet-modal.css",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -24,8 +41,9 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
-    "vite": "^8.0.12",
     "react": "^19.2.6",
-    "react-dom": "^19.2.6"
+    "react-dom": "^19.2.6",
+    "terser": "^5.48.0",
+    "vite": "^8.0.12"
   }
 }
